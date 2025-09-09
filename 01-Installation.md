@@ -4,11 +4,11 @@
 ```bash
 sudo cp /tmp/12.0-ACE-LINUXX64-12.0.11.3.tar.gz /opt
 cd /opt
-sudo tar -xvf 12.0-ACE-LINUXX64-12.0.11.3.tar.gz
+sudo tar -xvf 12.0-ACE-LINUXX64-12.0.11.3.tar.gz --exclude ace-12.0.11.3/tools
 sudo ace-12.0.11.3/ace make registry global accept license
 ```
 
-## Create ACE Admin user & Add to required Groups & Change ownershift of ACE directories.
+### Create ACE Admin user & Add to required Groups & Change ownershift of ACE directories.
 ```bash
 sudo useradd -g mqbrkrs -G mqm aceadm
 sudo chown -R aceadm:mqbrkrs /opt/ace-12.0.11.3
